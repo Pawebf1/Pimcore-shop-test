@@ -1,0 +1,15 @@
+pimcore:
+    properties:
+        predefined:
+            definitions:
+                60c6e6a5-394b-4e11-93cd-c84ca12440ad:
+                    name: 'Show LeftSidebar'
+                    description: ''
+                    key: left_nav_show
+                    type: bool
+                    data: ''
+                    config: ''
+                    ctype: document
+                    inheritable: false
+                    creationDate: 1655383210
+                    modificationDate: 1655383242

@@ -1,0 +1,15 @@
+pimcore:
+    properties:
+        predefined:
+            definitions:
+                3577b613-95cd-45ba-8599-cf356c422a39:
+                    name: 'Show header'
+                    description: 'Shows header'
+                    key: header_show
+                    type: bool
+                    data: ''
+                    config: ''
+                    ctype: document
+                    inheritable: true
+                    creationDate: 1655383184
+                    modificationDate: 1655383209
