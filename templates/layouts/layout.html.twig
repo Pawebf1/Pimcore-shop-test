@@ -42,13 +42,21 @@
             </div>
         {% endif %}
         <div class="col">
-            {{ block('content') }}
+            {{ block('contentNextToSidebar') }}
         </div>
     </div>
 
     <div class="row">
-        <div class='footer'>
-            <h1>FOOTER</h1>
+        <div class='col'>
+            {{ block('contentUnderSidebar') }}
+        </div>
+    </div>
+
+    <div class="row">
+        <div class='col'>
+            <div class='footer'>
+                <h1>FOOTER</h1>
+            </div>
         </div>
     </div>
 

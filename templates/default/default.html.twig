@@ -2,8 +2,14 @@
 
 {% block title %}Home{% endblock %}
 
-{% block content %}
+{% block contentNextToSidebar %}
 
-    {{ pimcore_areablock('content') }}
+    {{ pimcore_areablock('contentNextToSidebar') }}
+
+{% endblock %}
+
+{% block contentUnderSidebar %}
+
+    {{ pimcore_areablock('contentUnderSidebar') }}
 
 {% endblock %}
