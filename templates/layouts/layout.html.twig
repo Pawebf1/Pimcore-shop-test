@@ -8,6 +8,15 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 
+    <style>
+        .header {
+            background: grey;
+        }
+
+        .footer {
+            background: grey;
+        }
+    </style>
 
 </head>
 <body>
@@ -19,7 +28,9 @@
     <div class="row">
         {% if header %}
             <div class="col">
-                <h1>GIT SHOP</h1>
+                <div class='header'>
+                    <h1>GIT SHOP</h1>
+                </div>
             </div>
         {% endif %}
     </div>
@@ -36,7 +47,9 @@
     </div>
 
     <div class="row">
-        <h1>FOOTER</h1>
+        <div class='footer'>
+            <h1>FOOTER</h1>
+        </div>
     </div>
 
 </div>
