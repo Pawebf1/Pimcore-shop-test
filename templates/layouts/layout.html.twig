@@ -46,6 +46,8 @@
     <div class='container-fluid header'>
         {% set menuRenderer = pimcore_nav_renderer('menu') %}
         <nav class="navbar navbar-expand-md navbar-light bg-grey">
+            {% set logo = pimcore_asset(3) %}
+            <img src="{{ logo.thumbnail('headerLogo') }}">
             <a class="navbar-brand" href="/"><h1>GIT SHOP</h1></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
