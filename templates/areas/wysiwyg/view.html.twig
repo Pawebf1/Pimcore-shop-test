@@ -1,0 +1,7 @@
+{% set content = pimcore_wysiwyg('content') %}
+
+{% if editmode or not content.isEmpty() %}
+    <section class="area-wysiwyg">
+        {{ content|raw }}
+    </section>
+{% endif %}
