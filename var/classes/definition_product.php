@@ -11,6 +11,7 @@
  * - price [numeric]
  * - quantity [quantityValue]
  * - categories [manyToManyObjectRelation]
+ * - mainImage [image]
  * - gallery [imageGallery]
  * - store [classificationstore]
  */
@@ -21,7 +22,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'name' => 'product',
    'description' => '',
    'creationDate' => 0,
-   'modificationDate' => 1655480879,
+   'modificationDate' => 1655551050,
    'userOwner' => 2,
    'userModification' => 2,
    'parentClass' => '',
@@ -328,6 +329,30 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'children' => 
             array (
               0 => 
+              Pimcore\Model\DataObject\ClassDefinition\Data\Image::__set_state(array(
+                 'name' => 'mainImage',
+                 'title' => 'Main Image',
+                 'tooltip' => '',
+                 'mandatory' => false,
+                 'noteditable' => false,
+                 'index' => false,
+                 'locked' => NULL,
+                 'style' => '',
+                 'permissions' => NULL,
+                 'datatype' => 'data',
+                 'fieldtype' => 'image',
+                 'relationType' => false,
+                 'invisible' => false,
+                 'visibleGridView' => false,
+                 'visibleSearch' => false,
+                 'blockedVarsForExport' => 
+                array (
+                ),
+                 'width' => '',
+                 'height' => '',
+                 'uploadPath' => '',
+              )),
+              1 => 
               Pimcore\Model\DataObject\ClassDefinition\Data\ImageGallery::__set_state(array(
                  'name' => 'gallery',
                  'title' => 'Gallery',
@@ -389,7 +414,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'mandatory' => false,
                  'noteditable' => false,
                  'index' => false,
-                 'locked' => NULL,
+                 'locked' => false,
                  'style' => '',
                  'permissions' => NULL,
                  'datatype' => 'data',
@@ -496,56 +521,6 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'enableGridLocking' => false,
    'deletedDataComponents' => 
   array (
-    0 => 
-    Pimcore\Model\DataObject\ClassDefinition\Data\Classificationstore::__set_state(array(
-       'name' => 'info',
-       'title' => 'Info',
-       'tooltip' => '',
-       'mandatory' => false,
-       'noteditable' => false,
-       'index' => false,
-       'locked' => false,
-       'style' => '',
-       'permissions' => NULL,
-       'datatype' => 'data',
-       'fieldtype' => 'classificationstore',
-       'relationType' => false,
-       'invisible' => false,
-       'visibleGridView' => false,
-       'visibleSearch' => false,
-       'blockedVarsForExport' => 
-      array (
-      ),
-       'children' => 
-      array (
-      ),
-       'region' => NULL,
-       'layout' => NULL,
-       'width' => 0,
-       'height' => 0,
-       'maxTabs' => NULL,
-       'labelWidth' => 0,
-       'localized' => false,
-       'storeId' => 1,
-       'hideEmptyData' => false,
-       'disallowAddRemove' => false,
-       'referencedFields' => 
-      array (
-      ),
-       'fieldDefinitionsCache' => NULL,
-       'allowedGroupIds' => 
-      array (
-      ),
-       'activeGroupDefinitions' => 
-      array (
-      ),
-       'maxItems' => 0,
-       'permissionView' => NULL,
-       'permissionEdit' => NULL,
-       'childs' => 
-      array (
-      ),
-    )),
   ),
    'blockedVarsForExport' => 
   array (
