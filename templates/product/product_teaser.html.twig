@@ -1,0 +1,12 @@
+{% if product.mainImage %}
+    {{ pimcore_image_thumbnail_html(product.mainImage, 'standardTeaser') }}
+{% endif %}
+
+<div class="card-body">
+    <h4 class="card-title">{{ product.name }}</h4>
+    <p class="card-text">
+        {{ product.description | striptags | slice(0, 100) ~ '...' }}
+    </p>
+</div>
+
+
