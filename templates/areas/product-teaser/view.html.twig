@@ -1,16 +1,4 @@
-{% if editmode %}
-<p>Select position of product teaser</p>
-{{ pimcore_select("position", {
-    "store": [
-        ["d-flex", "left"],
-        ["d-flex justify-content-center", "center"],
-        ["d-flex justify-content-end", "right"]
-    ],
-    "defaultValue" : "d-flex"
-}) }}
-{% else %}
-<div class="{{ pimcore_select("position").getData() }}">
-    {% endif %}
+<div class="d-flex">
     <div class='row'>
         {% for i in pimcore_iterate_block(pimcore_block('teaserblock')) %}
             <div class="" style="width: 15rem;">
