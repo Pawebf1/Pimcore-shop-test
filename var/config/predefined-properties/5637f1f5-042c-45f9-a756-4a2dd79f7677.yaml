@@ -6,10 +6,10 @@ pimcore:
                     name: 'Navigation root'
                     description: ''
                     key: navigationRoot
-                    type: text
+                    type: document
                     data: ''
                     config: ''
                     ctype: document
                     inheritable: true
                     creationDate: 1655465267
-                    modificationDate: 1655465322
+                    modificationDate: 1655721793
