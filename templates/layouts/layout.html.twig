@@ -16,7 +16,6 @@
             justify-content: center;
         }
 
-
         .footer {
             background: grey;
             display: flex;
@@ -35,7 +34,6 @@
 {% if not navStartNode is instanceof('\\Pimcore\\Model\\Document\\Page') %}
     {% set navStartNode = pimcore_document(1) %}
 {% endif %}
-
 
 {% set mainNavigation = pimcore_build_nav({
     active: document,
@@ -88,7 +86,7 @@
     </div>
 {% endif %}
 
-<div class="container-fluid">
+<div class="container">
     <div class="row">
         {% if leftNavShow %}
             <div class="col-2">
