@@ -1,13 +1,10 @@
 <a href='products/{{ product.id }}'>
-    {% if product.mainImage %}
-        {{ pimcore_image_thumbnail_html(product.mainImage, 'standardTeaser') }}
-    {% endif %}
-
     <div class="card-body">
-        <h4 class="card-title">{{ product.name }}</h4>
-        <p class="card-text">
-            {{ product.description | striptags | slice(0, 100) ~ '...' }}
-        </p>
+        {% if product.mainImage %}
+            {{ pimcore_image_thumbnail_html(product.mainImage, 'standardTeaser') }}
+        {% endif %}
+        <h4 class="card-title">{{ product.price }} zł</h4>
+        <p class="card-text">{{ product.name | striptags | slice(0, 20) ~ '...' }}</p>
+
     </div>
-
-
+</a>
