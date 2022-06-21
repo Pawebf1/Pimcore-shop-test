@@ -1,0 +1,63 @@
+{% extends 'layouts/layout.html.twig' %}
+
+{% block title %}Home{% endblock %}
+
+{% block contentNextToSidebar %}
+    <div class='row'>
+        {% if product.mainImage %}
+            <div class="col-5">
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+                    <div class="carousel-indicators ">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                                class="active bg-dark" aria-current="true" aria-label="Slide 1"></button>
+                        {% for item in product.gallery().items %}
+                            <button type="button" class='bg-dark' data-bs-target="#carouselExampleIndicators"
+                                    data-bs-slide-to="{{ loop.index }}"
+                                    aria-label="Slide {{ loop.index }}"></button>
+                        {% endfor %}
+                    </div>
+
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            {{ pimcore_image_thumbnail_html(product.mainImage, 'productView') }}
+                        </div>
+                        {% for item in product.gallery().items %}
+                            <div class="carousel-item">
+                                {{ pimcore_image_thumbnail_html(item.image , 'productView') }}
+                            </div>
+                        {% endfor %}
+
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon bg-dark" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="next">
+                        <span class="carousel-control-next-icon bg-dark" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        {% endif %}
+        <div class='col d-flex align-items-center'>
+            <div class='col-10'>
+                <h4>{{ product.name }}</h4>
+                {#                <h5>{{ product.store.items }}</h5> #}
+            </div>
+            <div class='col'>
+                <h5>{{ product.price }} zł</h5>
+                <h6>Stock: {{ product.quantity }}</h6>
+            </div>
+
+        </div>
+
+        <div class='row'>
+            <div class='col'>
+                <h5>Description</h5>
+                {{ product.description|raw }}
+            </div>
+        </div>
+    </div>
+{% endblock %}
