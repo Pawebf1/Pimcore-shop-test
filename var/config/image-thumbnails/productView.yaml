@@ -1,0 +1,26 @@
+pimcore:
+    assets:
+        image:
+            thumbnails:
+                definitions:
+                    productView:
+                        items:
+                            -
+                                method: resize
+                                arguments:
+                                    width: 500
+                                    height: 500
+                        medias: {  }
+                        name: productView
+                        description: ''
+                        group: ''
+                        format: SOURCE
+                        quality: 85
+                        highResolution: 0.0
+                        preserveColor: false
+                        preserveMetaData: false
+                        rasterizeSVG: false
+                        downloadable: false
+                        modificationDate: 1655733171
+                        creationDate: 1655730977
+                        preserveAnimation: false
