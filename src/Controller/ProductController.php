@@ -6,7 +6,9 @@ use Pimcore\Controller\FrontendController;
 use Pimcore\Model\DataObject\Product;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
+use Symfony\Component\Routing\Annotation\Route;
 
 class ProductController extends FrontendController
 {
@@ -20,5 +22,18 @@ class ProductController extends FrontendController
         }
 
         throw new NotFoundHttpException('Product not found.');
+    }
+
+    /**
+     * @Route("/products/{!id}", name="product_list")
+     *
+     * @param Request $request
+     *
+     * @return Response
+     */
+    public function productViewAction(Request $request, int $id)
+    {
+        $product = Product::getById($id);
+        return $this->render('product/index.html.twig', ['product' => $product]);
     }
 }
